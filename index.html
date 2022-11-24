@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <title>Orgamic</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <link rel="stylesheet" href="css/jquery.rateyo.min.css"/>
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+        <div class="header__top-leftbox">
+          <div class="header__top-address">15/A, Nest Tower, NYC</div>
+          <div class="header__top-mail">info@webmail.com</div>
+        </div>
+        <div class="header__top-rightbox">
+          <div class="header__top-language">
+            <select class="header__top-select">
+              <option selected>English</option>
+              <option>Russian</option>
+              <option>German</option>
+              <option>Spanish</option>
+            </select>
+          </div>
+          <div class="header__top-social">
+            <a class="header__top-facebook" href="#">
+              <svg width="7" height="13" viewBox="0 0 7 13" fill="none">
+                <path d="M4.55 7.475H6.175L6.825 4.875H4.55V3.575C4.55 2.9055 4.55 2.275 5.85 2.275H6.825V0.0910001C6.6131 0.0630501 5.81295 0 4.96795 0C3.2032 0 1.95 1.07705 1.95 3.055V4.875H0V7.475H1.95V13H4.55V7.475Z" fill="#CCCCCC"/>
+              </svg>
+            </a>
+            <a class="header__top-twitter" href="#">
+              <svg width="15" height="11" viewBox="0 0 15 11" fill="none">
+                <path d="M14.3536 1.30582C13.8469 1.52995 13.3096 1.67715 12.7594 1.74254C13.3393 1.39571 13.7734 0.849859 13.9806 0.206713C13.4364 0.530605 12.8397 0.757594 12.2178 0.880381C11.8001 0.433423 11.2464 0.136999 10.6428 0.037191C10.0392 -0.062617 9.41956 0.0397836 8.88018 0.328473C8.3408 0.617163 7.91191 1.07597 7.66018 1.63356C7.40845 2.19115 7.34799 2.81628 7.4882 3.41178C6.38452 3.35646 5.30481 3.06965 4.31917 2.56997C3.33352 2.07029 2.46399 1.3689 1.767 0.511357C1.52029 0.935104 1.39065 1.41681 1.39134 1.90714C1.39134 2.86953 1.88116 3.71974 2.62585 4.21752C2.18515 4.20365 1.75415 4.08464 1.36878 3.8704V3.90492C1.36891 4.54586 1.5907 5.16704 1.99655 5.66313C2.40239 6.15922 2.96731 6.49968 3.59553 6.6268C3.18643 6.73766 2.75746 6.754 2.34111 6.67459C2.51824 7.22629 2.86346 7.70878 3.32845 8.05452C3.79343 8.40025 4.3549 8.59191 4.93424 8.60267C4.35845 9.05487 3.69919 9.38916 2.99413 9.5864C2.28907 9.78365 1.55204 9.84 0.825195 9.75222C2.09401 10.5682 3.57104 11.0014 5.07959 11C10.1855 11 12.9778 6.77016 12.9778 3.10182C12.9778 2.98236 12.9744 2.86156 12.9691 2.74342C13.5126 2.35061 13.9817 1.86401 14.3543 1.30648L14.3536 1.30582Z" fill="#CCCCCC"/>
+              </svg>
+            </a>
+            <a class="header__top-instagram" href="#">
+              <svg width="14" height="13" viewBox="0 0 14 13" fill="none">
+                <path d="M6.85449 0C8.62054 0 8.84089 0.00649996 9.53379 0.039C10.226 0.0715 10.6973 0.18005 11.112 0.34125C11.541 0.50635 11.9024 0.72995 12.2638 1.0907C12.5943 1.41563 12.8501 1.80868 13.0132 2.2425C13.1738 2.65655 13.283 3.12845 13.3155 3.8207C13.346 4.5136 13.3545 4.73395 13.3545 6.5C13.3545 8.26605 13.348 8.4864 13.3155 9.1793C13.283 9.87155 13.1738 10.3428 13.0132 10.7575C12.8505 11.1916 12.5947 11.5847 12.2638 11.9093C11.9388 12.2397 11.5457 12.4954 11.112 12.6587C10.6979 12.8193 10.226 12.9285 9.53379 12.961C8.84089 12.9915 8.62054 13 6.85449 13C5.08844 13 4.86809 12.9935 4.17519 12.961C3.48294 12.9285 3.01169 12.8193 2.59699 12.6587C2.163 12.4959 1.76988 12.2401 1.44519 11.9093C1.11461 11.5844 0.858848 11.1914 0.695742 10.7575C0.534542 10.3434 0.425992 9.87155 0.393492 9.1793C0.362942 8.4864 0.354492 8.26605 0.354492 6.5C0.354492 4.73395 0.360992 4.5136 0.393492 3.8207C0.425992 3.1278 0.534542 2.6572 0.695742 2.2425C0.858396 1.80842 1.11421 1.41526 1.44519 1.0907C1.76998 0.76 2.16307 0.504224 2.59699 0.34125C3.01169 0.18005 3.48229 0.0715 4.17519 0.039C4.86809 0.00844996 5.08844 0 6.85449 0ZM6.85449 3.25C5.99254 3.25 5.16589 3.59241 4.5564 4.2019C3.9469 4.8114 3.60449 5.63805 3.60449 6.5C3.60449 7.36195 3.9469 8.1886 4.5564 8.7981C5.16589 9.40759 5.99254 9.75 6.85449 9.75C7.71645 9.75 8.5431 9.40759 9.15259 8.7981C9.76208 8.1886 10.1045 7.36195 10.1045 6.5C10.1045 5.63805 9.76208 4.8114 9.15259 4.2019C8.5431 3.59241 7.71645 3.25 6.85449 3.25ZM11.0795 3.0875C11.0795 2.87201 10.9939 2.66535 10.8415 2.51298C10.6891 2.3606 10.4825 2.275 10.267 2.275C10.0515 2.275 9.84484 2.3606 9.69247 2.51298C9.54009 2.66535 9.45449 2.87201 9.45449 3.0875C9.45449 3.30299 9.54009 3.50965 9.69247 3.66202C9.84484 3.8144 10.0515 3.9 10.267 3.9C10.4825 3.9 10.6891 3.8144 10.8415 3.66202C10.9939 3.50965 11.0795 3.30299 11.0795 3.0875ZM6.85449 4.55C7.37166 4.55 7.86765 4.75545 8.23335 5.12114C8.59905 5.48684 8.80449 5.98283 8.80449 6.5C8.80449 7.01717 8.59905 7.51316 8.23335 7.87886C7.86765 8.24455 7.37166 8.45 6.85449 8.45C6.33732 8.45 5.84133 8.24455 5.47563 7.87886C5.10994 7.51316 4.90449 7.01717 4.90449 6.5C4.90449 5.98283 5.10994 5.48684 5.47563 5.12114C5.84133 4.75545 6.33732 4.55 6.85449 4.55Z" fill="#CCCCCC"/>
+              </svg>
+            </a>
+            <a class="header__top-linkedin" href="#">
+              <svg width="15" height="13" viewBox="0 0 15 13" fill="none">
+                <path d="M3.24322 1.44509C3.24303 1.82816 3.09067 2.19546 2.81967 2.46619C2.54866 2.73693 2.1812 2.88892 1.79813 2.88873C1.41507 2.88854 1.04776 2.73618 0.777026 2.46517C0.506291 2.19417 0.354301 1.82671 0.354492 1.44364C0.354684 1.06057 0.507041 0.693269 0.778047 0.422534C1.04905 0.151798 1.41651 -0.000191354 1.79958 1.80807e-07C2.18265 0.000191715 2.54995 0.152549 2.82069 0.423555C3.09142 0.694562 3.24341 1.06202 3.24322 1.44509ZM3.28655 3.95828H0.397823V13H3.28655V3.95828ZM7.85074 3.95828H4.97646V13H7.82186V8.25526C7.82186 5.61208 11.2667 5.36654 11.2667 8.25526V13H14.1193V7.2731C14.1193 2.81723 9.02068 2.98333 7.82186 5.17155L7.85074 3.95828Z" fill="#CCCCCC"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="header__bottom">
+        <a class="logo" href="#">
+          <img src="img/icons/logo.svg" alt="">
+        </a>
+        <div class="header__bottom-btn">
+          <ul class="header__list">
+            <li class="header__list-item">
+              <a class="header__list-link" href="#">Home +</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__list-link" href="#">About +</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__list-link" href="#">Shop +</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__list-link" href="#">Page +</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__list-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <a class="header__bottom-login" href="#">Login</a>
+          <a class="header__bottom-search" href="#"></a>
+          <a class="header__bottom-cart" href="#"></a>
+        </div>
+        <a class="header__bottom-menu" href="#">
+          <span class="header__bottom-line"></span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="top-slider">
+    <div class="top-slider__inner">
+      <a class="top-slider__link" href="#">
+        <img src="img/content/slider-top.jpg" alt="">
+      </a>
+      <a class="top-slider__link" href="#">
+        <img src="img/content/slider-top.jpg" alt="">
+      </a>
+      <a class="top-slider__link" href="#">
+        <img src="img/content/slider-top.jpg" alt="">
+      </a>
+    </div>
+    <div class="container">
+      <div class="top-info">
+
+        <div class="top-info__inner">
+          <img class="top-info__img" src="img/icons/shipping.svg" alt="">
+          <div class="top-info__inner-item">
+            <div class="top-info__inner-title">Free Shipping</div>
+            <div class="top-info__inner-text">On all orders over $35.00</div>
+          </div>
+        </div>
+        <div class="top-info__inner">
+          <img class="top-info__img" src="img/icons/box.svg" alt="">
+          <div class="top-info__inner-item">
+            <div class="top-info__inner-title">15 day returns</div>
+            <div class="top-info__inner-text">Moneyback guarantee</div>
+          </div>
+        </div>
+        <div class="top-info__inner">
+          <img class="top-info__img" src="img/icons/cube.svg" alt="">
+          <div class="top-info__inner-item">
+            <div class="top-info__inner-title">Fresh product</div>
+            <div class="top-info__inner-text">Best online organic food</div>
+          </div>
+        </div>
+        <div class="top-info__inner">
+          <img class="top-info__img" src="img/icons/offer.svg" alt="">
+          <div class="top-info__inner-item">
+            <div class="top-info__inner-title">Summer offer</div>
+            <div class="top-info__inner-text">On all orders over</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+   <section class="about">
+    <div class="container">
+      <div class="about__inner">
+        
+        <img class="about__img" src="img/content/about-img-1.jpg" alt="">
+        
+        <div class="about__inner-itemmiddle">
+          <img class="about__img" src="img/content/about-img-2.jpg" alt="">
+          <div class="about__img-text">
+            <span>15+</span> Years Experience
+          </div>
+        </div>
+        <div class="about__inner-itemright">
+          <h2 class="about__inner-title">
+            High quality<br>
+            organic food store
+          </h2>
+          <p class="about__inner-text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+            book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+            unchanged.
+          </p>
+          <blockquote class="about__inner-blockquote">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+          </blockquote>
+          <div class="about__inner-autor">
+            <p class="about__inner-autortitle">
+              Hasan Mahmud
+            </p>
+            <p class="about__inner-autortext">
+              Shop Director
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="categorie">
+
+        <div class="categorie__item">
+          <img class="categorie__item-img" src="img/categories/vegetables.png" alt="">
+          <div class="categorie__item-title">
+            Vegetables
+          </div>
+          <p class="categorie__item-text">
+            Purchasing from select family
+            farmers who farm onganically.
+          </p>
+          <a class="categorie__item-btn" href="#">
+            <span>SHOP NOW</span>
+            <img src="img/icons/arrow.svg" alt="">
+          </a>
+        </div>
+        <div class="categorie__item">
+          <img class="categorie__item-img" src="img/categories/fresh-fruits.png" alt="">
+          <div class="categorie__item-title">
+            Fresh Fruits
+          </div>
+          <p class="categorie__item-text">
+            Purchasing from select family
+            farmers who farm onganically.
+          </p>
+          <a class="categorie__item-btn" href="#">
+            <span>SHOP NOW</span>
+            <img src="img/icons/arrow.svg" alt="">
+          </a>
+        </div>
+        <div class="categorie__item">
+          <img class="categorie__item-img categorie__item-eggpent" src="img/categories/eggpent.png" alt="">
+          <div class="categorie__item-title">
+            Eggpent
+          </div>
+          <p class="categorie__item-text">
+            Purchasing from select family
+            farmers who farm onganically.
+          </p>
+          <a class="categorie__item-btn" href="#">
+            <span>SHOP NOW</span>
+            <img src="img/icons/arrow.svg" alt="">
+          </a>
+        </div>
+        <div class="categorie__item">
+          <img class="categorie__item-img" src="img/categories/tomato.png" alt="">
+          <div class="categorie__item-title">
+            Tomato
+          </div>
+          <p class="categorie__item-text">
+            Purchasing from select family
+            farmers who farm onganically.
+          </p>
+          <a class="categorie__item-btn" href="#">
+            <span>SHOP NOW</span>
+            <img src="img/icons/arrow.svg" alt="">            
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="container">
+      <div class="products__wrapper">
+        <h2 class="products__title">
+          Popular Products
+        </h2>
+        <div class="products__top">
+
+              <button class="products__top-btn" data-filter="all">
+                All
+              </button>
+              <button class="products__top-btn" data-filter=".category-a">
+                Food
+              </button>        
+              <button class="products__top-btn" data-filter=".category-b">
+                Organic
+              </button>         
+              <button class="products__top-btn" data-filter=".category-c">
+                Fruits
+              </button>    
+              <button class="products__top-btn" data-filter=".category-d">
+                Health
+              </button>          
+              <button class="products__top-btn" data-filter=".category-e">
+                Seafood
+              </button>
+         
+        </div>
+        <div class="products__content">
+
+          <div class="products__box mix category-a category-c">
+            <a class="products__sale" href="#">
+              Off 50%
+            </a>
+            <a class="products__reverse" href="#">
+              <img src="img/icons/reverse.svg" alt="">
+            </a>
+            <a class="products__like" href="#">
+              <img src="img/icons/like.svg" alt="">
+            </a>
+            <a class="products__full" href="#">
+              <img src="img/icons/full.svg" alt="">
+            </a>
+            <img class="products__img" src="img/products/1.png" alt="">
+            <div class="products__details">
+              <h3 class="products__details-title">
+                Blackberry Fruit
+              </h3>
+              <p class="products__details-price">
+                $10.00 - $20.00
+              </p>
+              <div class="stars" data-rateyo-rating="5"></div>
+              <a class="products__details-link" href="#">SHOP NOW</a>
+            </div>
+          </div>
+          <div class="products__box products__box--sale mix category-a category-b category-d">
+            <a class="products__sale" href="#">
+              Off 50%
+            </a>
+            <a class="products__reverse" href="#">
+              <img src="img/icons/reverse.svg" alt="">
+            </a>
+            <a class="products__like" href="#">
+              <img src="img/icons/like.svg" alt="">
+            </a>
+            <a class="products__full" href="#">
+              <img src="img/icons/full.svg" alt="">
+            </a>
+            <img class="products__img" src="img/products/2.png" alt="">
+            <div class="products__details">
+              <h3 class="products__details-title">
+                Avocado Fruit
+              </h3>
+              <p class="products__details-price">
+                <span>$10.00</span> - $20.00
+              </p>
+              <div class="stars" data-rateyo-rating="4"></div>
+              <a class="products__details-link" href="#">SHOP NOW</a>
+            </div>
+          </div>
+          <div class="products__box mix category-a category-c category-e">
+            <a class="products__sale" href="#">
+              Off 50%
+            </a>
+            <a class="products__reverse" href="#">
+              <img src="img/icons/reverse.svg" alt="">
+            </a>
+            <a class="products__like" href="#">
+              <img src="img/icons/like.svg" alt="">
+            </a>
+            <a class="products__full" href="#">
+              <img src="img/icons/full.svg" alt="">
+            </a>
+            <img class="products__img" src="img/products/3.png" alt="">
+            <div class="products__details">
+              <h3 class="products__details-title">
+                Kiwifruit Vitamin
+              </h3>
+              <p class="products__details-price">
+                $10.00 - $20.00
+              </p>
+              <div class="stars" data-rateyo-rating="5"></div>
+              <a class="products__details-link" href="#">SHOP NOW</a>
+            </div>
+          </div>
+          <div class="products__box mix category-b category-c category-e">
+            <a class="products__sale" href="#">
+              Off 50%
+            </a>
+            <a class="products__reverse" href="#">
+              <img src="img/icons/reverse.svg" alt="">
+            </a>
+            <a class="products__like" href="#">
+              <img src="img/icons/like.svg" alt="">
+            </a>
+            <a class="products__full" href="#">
+              <img src="img/icons/full.svg" alt="">
+            </a>
+            <img class="products__img" src="img/products/4.png" alt="">
+            <div class="products__details">
+              <h3 class="products__details-title">
+                Lemon
+              </h3>
+              <p class="products__details-price">
+                $10.00 - $20.00
+              </p>
+              <div class="stars" data-rateyo-rating="5"></div>
+              <a class="products__details-link" href="#">SHOP NOW</a>
+            </div>
+          </div>
+          <div class="products__box mix category-e category-d category-e">
+            <a class="products__sale" href="#">
+              Off 50%
+            </a>
+            <a class="products__reverse" href="#">
+              <img src="img/icons/reverse.svg" alt="">
+            </a>
+            <a class="products__like" href="#">
+              <img src="img/icons/like.svg" alt="">
+            </a>
+            <a class="products__full" href="#">
+              <img src="img/icons/full.svg" alt="">
+            </a>
+            <img class="products__img" src="img/products/5.png" alt="">
+            <div class="products__details">
+              <h3 class="products__details-title">
+                Purple onion
+              </h3>
+              <p class="products__details-price">
+                $10.00 - $20.00
+              </p>
+              <div class="stars" data-rateyo-rating="5"></div>
+              <a class="products__details-link" href="#">SHOP NOW</a>
+            </div>
+          </div>
+          <div class="products__box mix category-b category-d">
+            <a class="products__sale" href="#">
+              Off 50%
+            </a>
+            <a class="products__reverse" href="#">
+              <img src="img/icons/reverse.svg" alt="">
+            </a>
+            <a class="products__like" href="#">
+              <img src="img/icons/like.svg" alt="">
+            </a>
+            <a class="products__full" href="#">
+              <img src="img/icons/full.svg" alt="">
+            </a>
+            <img class="products__img" src="img/products/6.png" alt="">
+            <div class="products__details">
+              <h3 class="products__details-title">
+                Brown Almonds
+              </h3>
+              <p class="products__details-price">
+                $10.00 - $20.00
+              </p>
+              <div class="stars" data-rateyo-rating="5"></div>
+              <a class="products__details-link" href="#">SHOP NOW</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="products__banner">
+          <div class="products__banner-left">
+            <div class="products__banner-lefttext">Save up to 50%</div>
+            <h3 class="products__banner-lefttitle">
+              THE BLUEPRINT
+              TO HEALTH
+            </h3>
+            <a class="products__banner-leftlink" href="#">BUY NOW</a>
+          </div>
+          <div class="products__banner-right">
+            <div class="products__banner-righttext">offer 30% discount</div>
+            <h3 class="products__banner-righttitle">
+              FRUITS &
+              VEGETABLES
+            </h3>
+            <a class="products__banner-rightlink" href="#">BUY NOW</a>
+          </div>
+        </div>
+
+        <div class="products__slider">
+          <h2 class="products__slider-title">
+            Featured Products
+          </h2>
+          <div class="products__slider-item">
+              <div class="products__box">
+                <a class="products__sale" href="#">
+                  Off 50%
+                </a>
+                <a class="products__reverse" href="#">
+                  <img src="img/icons/reverse.svg" alt="">
+                </a>
+                <a class="products__like" href="#">
+                  <img src="img/icons/like.svg" alt="">
+                </a>
+                <a class="products__full" href="#">
+                  <img src="img/icons/full.svg" alt="">
+                </a>
+                <img class="products__img" src="img/products/7.png" alt="">
+                <div class="products__details">
+                  <h3 class="products__details-title">
+                    Red Pepper
+                  </h3>
+                  <p class="products__details-price">
+                    $10.00 - $20.00
+                  </p>
+                  <div class="stars" data-rateyo-rating="5"></div>
+                  <a class="products__details-link" href="#">SHOP NOW</a>
+                </div>
+              </div>
+              <div class="products__box products__box--sale">
+                <a class="products__sale" href="#">
+                  Off 50%
+                </a>
+                <a class="products__reverse" href="#">
+                  <img src="img/icons/reverse.svg" alt="">
+                </a>
+                <a class="products__like" href="#">
+                  <img src="img/icons/like.svg" alt="">
+                </a>
+                <a class="products__full" href="#">
+                  <img src="img/icons/full.svg" alt="">
+                </a>
+                <img class="products__img" src="img/products/8.png" alt="">
+                <div class="products__details">
+                  <h3 class="products__details-title">
+                    Cabbage
+                  </h3>
+                  <p class="products__details-price">
+                    <span>$30.00</span> - $15.00
+                  </p>
+                  <div class="stars" data-rateyo-rating="4"></div>
+                  <a class="products__details-link" href="#">SHOP NOW</a>
+                </div>
+              </div>
+              <div class="products__box">
+                <a class="products__sale" href="#">
+                  Off 50%
+                </a>
+                <a class="products__reverse" href="#">
+                  <img src="img/icons/reverse.svg" alt="">
+                </a>
+                <a class="products__like" href="#">
+                  <img src="img/icons/like.svg" alt="">
+                </a>
+                <a class="products__full" href="#">
+                  <img src="img/icons/full.svg" alt="">
+                </a>
+                <img class="products__img" src="img/products/9.png" alt="">
+                <div class="products__details">
+                  <h3 class="products__details-title">
+                    Tomato
+                  </h3>
+                  <p class="products__details-price">
+                    $15.00
+                  </p>
+                  <div class="stars" data-rateyo-rating="5"></div>
+                  <a class="products__details-link" href="#">SHOP NOW</a>
+                </div>
+              </div>
+              <div class="products__box">
+                <a class="products__sale" href="#">
+                  Off 50%
+                </a>
+                <a class="products__reverse" href="#">
+                  <img src="img/icons/reverse.svg" alt="">
+                </a>
+                <a class="products__like" href="#">
+                  <img src="img/icons/like.svg" alt="">
+                </a>
+                <a class="products__full" href="#">
+                  <img src="img/icons/full.svg" alt="">
+                </a>
+                <img class="products__img" src="img/products/7.png" alt="">
+                <div class="products__details">
+                  <h3 class="products__details-title">
+                    Red Pepper
+                  </h3>
+                  <p class="products__details-price">
+                    $10.00 - $20.00
+                  </p>
+                  <div class="stars" data-rateyo-rating="5"></div>
+                  <a class="products__details-link" href="#">SHOP NOW</a>
+                </div>
+              </div>
+              <div class="products__box">
+                <a class="products__sale" href="#">
+                  Off 50%
+                </a>
+                <a class="products__reverse" href="#">
+                  <img src="img/icons/reverse.svg" alt="">
+                </a>
+                <a class="products__like" href="#">
+                  <img src="img/icons/like.svg" alt="">
+                </a>
+                <a class="products__full" href="#">
+                  <img src="img/icons/full.svg" alt="">
+                </a>
+                <img class="products__img" src="img/products/8.png" alt="">
+                <div class="products__details">
+                  <h3 class="products__details-title">
+                    Cabbage
+                  </h3>
+                  <p class="products__details-price">
+                    <span>$30.00</span> - $15.00
+                  </p>
+                  <div class="stars" data-rateyo-rating="4"></div>
+                  <a class="products__details-link" href="#">SHOP NOW</a>
+                </div>
+              </div>
+              <div class="products__box">
+                <a class="products__sale" href="#">
+                  Off 50%
+                </a>
+                <a class="products__reverse" href="#">
+                  <img src="img/icons/reverse.svg" alt="">
+                </a>
+                <a class="products__like" href="#">
+                  <img src="img/icons/like.svg" alt="">
+                </a>
+                <a class="products__full" href="#">
+                  <img src="img/icons/full.svg" alt="">
+                </a>
+                <img class="products__img" src="img/products/9.png" alt="">
+                <div class="products__details">
+                  <h3 class="products__details-title">
+                    Tomato
+                  </h3>
+                  <p class="products__details-price">
+                    $15.00
+                  </p>
+                  <div class="stars" data-rateyo-rating="5"></div>
+                  <a class="products__details-link" href="#">SHOP NOW</a>
+                </div>
+              </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="banner__info">
+    <div class="container">
+      <dl class="banner__info-list">
+        <div>
+          <dd>1570+</dd>
+          <dt>Total Products</dt>
+        </div>
+        <div>
+          <dd>3560+</dd>
+          <dt>Satisfied Clients</dt>
+        </div>
+        <div>
+          <dd>4550+</dd>
+          <dt>Project Completed</dt>
+        </div>
+        <div>
+          <dd>130+</dd>
+          <dt>Awards Winning</dt>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <section class="blog">
+    <div class="container">
+      <div class="blog__wrapper">
+        <div class="blog__page">
+          <blockquote class="blog__page-text">
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore magna<br>
+            aliqua. Ut enim ad minim veniam.”
+          </blockquote>
+          <img class="blog__page-img" src="img/products/blog-img.png" alt="blog img">
+          <h6 class="blog__page-title">Alison Parker</h6>
+          <p class="blog__page-subtitle">Product Manager</p>
+          <div class="stars" data-rateyo-rating="5"></div>
+        </div>
+      </div>
+      <h2 class="blog__title">LATEST BLOG</h2>
+      <div class="blog__items">
+
+        <div class="blog__item">
+          <img class="blog__item-img" src="img/content/blog-item-1.jpg" alt="item image">
+          <div class="blog__item-top">
+            <a class="blog__item-autor" href="#">By: Admin</a>
+            <a class="blog__item-service" href="#">Services</a>
+            <a class="blog__item-comment" href="#">04 Comment</a>
+          </div>
+          <div class="blog__item-title">
+            Common engine oil <br>
+            problems and solutions
+          </div>
+          <div class="blog__item-bottom">
+            <a class="blog__item-date" href="#">August 27, 2021</a>
+            <a class="blog__item-link" href="#">READ MORE</a>
+          </div>
+        </div>
+        <div class="blog__item">
+          <img class="blog__item-img" src="img/content/blog-item-2.jpg" alt="item image">
+          <div class="blog__item-top">
+            <a class="blog__item-autor" href="#">By: Admin</a>
+            <a class="blog__item-service" href="#">Services</a>
+            <a class="blog__item-comment" href="#">04 Comment</a>
+          </div>
+          <div class="blog__item-title">
+            How and when to replace
+            brack rotors
+          </div>
+          <div class="blog__item-bottom">
+            <a class="blog__item-date" href="#">August 27, 2021</a>
+            <a class="blog__item-link" href="#">READ MORE</a>
+          </div>
+        </div>
+        <div class="blog__item">
+          <img class="blog__item-img" src="img/content/blog-item-3.jpg" alt="item image">
+          <div class="blog__item-top">
+            <a class="blog__item-autor" href="#">By: Admin</a>
+            <a class="blog__item-service" href="#">Services</a>
+            <a class="blog__item-comment" href="#">04 Comment</a>
+          </div>
+          <div class="blog__item-title">
+            Elenance, Services <br>
+            and repirs
+          </div>
+          <div class="blog__item-bottom">
+            <a class="blog__item-date" href="#">August 27, 2021</a>
+            <a class="blog__item-link" href="#">READ MORE</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts">
+    <div class="container">
+      <div class="contacts__box">
+        <h2 class="contacts__title">Subscribe To Newsletter</h2>
+        <form class="contacts__form">
+          <input class="contacts__input" type="email" placeholder="Enter your email address...">
+          <button class="contacts__btn" type="submit">SUBSCRIBE NOW</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="logo-box">
+          <a class="logo-box__link" href="#">
+            <img src="img/icons/logo-white.svg" alt="">
+          </a>
+          <p class="logo-box__text">
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+          </p>
+          <div class="logo-box__social">
+            <a href="#">
+              <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.25 8.625H7.125L7.875 5.625H5.25V4.125C5.25 3.3525 5.25 2.625 6.75 2.625H7.875V0.105C7.6305 0.0727501 6.70725 0 5.73225 0C3.696 0 2.25 1.24275 2.25 3.525V5.625H0V8.625H2.25V15H5.25V8.625Z" fill="#CCCCCC"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.9882 1.54324C15.3893 1.80812 14.7543 1.98209 14.1041 2.05937C14.7894 1.64947 15.3024 1.00438 15.5473 0.244297C14.9041 0.627078 14.199 0.895338 13.464 1.04045C12.9703 0.512227 12.3159 0.161908 11.6026 0.0439529C10.8893 -0.0740019 10.157 0.047017 9.51953 0.388195C8.88208 0.729374 8.3752 1.2716 8.07771 1.93057C7.78021 2.58954 7.70876 3.32833 7.87446 4.0321C6.57011 3.96673 5.29409 3.62777 4.12924 3.03724C2.96439 2.4467 1.93675 1.6178 1.11304 0.604331C0.821481 1.10512 0.668262 1.67441 0.669082 2.2539C0.669082 3.39126 1.24796 4.39606 2.12804 4.98435C1.60722 4.96795 1.09785 4.8273 0.642413 4.57411V4.6149C0.64257 5.37238 0.904688 6.1065 1.38432 6.69279C1.86396 7.27907 2.53159 7.68144 3.27403 7.83167C2.79055 7.96269 2.28359 7.98201 1.79154 7.88815C2.00087 8.54016 2.40886 9.11038 2.95839 9.51897C3.50792 9.92757 4.17147 10.1541 4.85614 10.1668C4.17567 10.7012 3.39653 11.0963 2.56328 11.3294C1.73003 11.5625 0.859004 11.6291 0 11.5253C1.49951 12.4897 3.24508 13.0017 5.02792 13C11.0622 13 14.3621 8.0011 14.3621 3.66579C14.3621 3.5246 14.3582 3.38184 14.3519 3.24222C14.9942 2.778 15.5486 2.20293 15.9889 1.54403L15.9882 1.54324Z" fill="#CCCCCC"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 0C9.53775 0 9.792 0.00749996 10.5915 0.045C11.3902 0.0825 11.934 0.20775 12.4125 0.39375C12.9075 0.58425 13.3245 0.84225 13.7415 1.2585C14.1229 1.63342 14.418 2.08694 14.6063 2.5875C14.7915 3.06525 14.9175 3.60975 14.955 4.4085C14.9902 5.208 15 5.46225 15 7.5C15 9.53775 14.9925 9.792 14.955 10.5915C14.9175 11.3902 14.7915 11.934 14.6063 12.4125C14.4185 12.9133 14.1233 13.367 13.7415 13.7415C13.3665 14.1227 12.913 14.4178 12.4125 14.6063C11.9347 14.7915 11.3902 14.9175 10.5915 14.955C9.792 14.9902 9.53775 15 7.5 15C5.46225 15 5.208 14.9925 4.4085 14.955C3.60975 14.9175 3.066 14.7915 2.5875 14.6063C2.08674 14.4184 1.63315 14.1232 1.2585 13.7415C0.877055 13.3666 0.581949 12.9131 0.39375 12.4125C0.20775 11.9347 0.0825 11.3902 0.045 10.5915C0.00974996 9.792 0 9.53775 0 7.5C0 5.46225 0.00749996 5.208 0.045 4.4085C0.0825 3.609 0.20775 3.066 0.39375 2.5875C0.581427 2.08663 0.876603 1.63299 1.2585 1.2585C1.63325 0.876923 2.08682 0.581797 2.5875 0.39375C3.066 0.20775 3.609 0.0825 4.4085 0.045C5.208 0.00974996 5.46225 0 7.5 0ZM7.5 3.75C6.50544 3.75 5.55161 4.14509 4.84835 4.84835C4.14509 5.55161 3.75 6.50544 3.75 7.5C3.75 8.49456 4.14509 9.44839 4.84835 10.1517C5.55161 10.8549 6.50544 11.25 7.5 11.25C8.49456 11.25 9.44839 10.8549 10.1517 10.1517C10.8549 9.44839 11.25 8.49456 11.25 7.5C11.25 6.50544 10.8549 5.55161 10.1517 4.84835C9.44839 4.14509 8.49456 3.75 7.5 3.75ZM12.375 3.5625C12.375 3.31386 12.2762 3.0754 12.1004 2.89959C11.9246 2.72377 11.6861 2.625 11.4375 2.625C11.1889 2.625 10.9504 2.72377 10.7746 2.89959C10.5988 3.0754 10.5 3.31386 10.5 3.5625C10.5 3.81114 10.5988 4.0496 10.7746 4.22541C10.9504 4.40123 11.1889 4.5 11.4375 4.5C11.6861 4.5 11.9246 4.40123 12.1004 4.22541C12.2762 4.0496 12.375 3.81114 12.375 3.5625ZM7.5 5.25C8.09674 5.25 8.66903 5.48705 9.09099 5.90901C9.51295 6.33097 9.75 6.90326 9.75 7.5C9.75 8.09674 9.51295 8.66903 9.09099 9.09099C8.66903 9.51295 8.09674 9.75 7.5 9.75C6.90326 9.75 6.33097 9.51295 5.90901 9.09099C5.48705 8.66903 5.25 8.09674 5.25 7.5C5.25 6.90326 5.48705 6.33097 5.90901 5.90901C6.33097 5.48705 6.90326 5.25 7.5 5.25Z" fill="#CCCCCC"/>
+                </svg>
+            </a>
+            <a href="#">
+              <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.33315 1.66741C3.33293 2.10941 3.15713 2.53322 2.84443 2.84561C2.53173 3.158 2.10774 3.33337 1.66574 3.33315C1.22374 3.33293 0.799926 3.15713 0.487539 2.84443C0.175152 2.53173 -0.000220793 2.10774 2.08623e-07 1.66574C0.00022121 1.22374 0.176018 0.799926 0.488718 0.487539C0.801417 0.175152 1.2254 -0.000220793 1.66741 2.08623e-07C2.10941 0.00022121 2.53322 0.176018 2.84561 0.488718C3.158 0.801417 3.33337 1.2254 3.33315 1.66741ZM3.38315 4.56725H0.0499974V15H3.38315V4.56725ZM8.64952 4.56725H5.33304V15H8.61619V9.5253C8.61619 6.47547 12.591 6.19216 12.591 9.5253V15H15.8825V8.39203C15.8825 3.25065 9.99944 3.44231 8.61619 5.96717L8.64952 4.56725Z" fill="#CCCCCC"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__quick">
+          <h3 class="footer__quick-title">
+            Quick Link
+          </h3>
+          <ul class="footer__quick-list">
+            <li class="footer__quick-listitem">
+              <a class="footer__quick-listlink" href="#">
+                Home
+              </a>
+            </li>
+            <li class="footer__quick-listitem">
+              <a class="footer__quick-listlink" href="#">
+                Featured
+              </a>
+            </li>
+            <li class="footer__quick-listitem">
+              <a class="footer__quick-listlink" href="#">
+                About Us
+              </a>
+            </li>
+            <li class="footer__quick-listitem">
+              <a class="footer__quick-listlink" href="#">
+                Product
+              </a>
+            </li>
+            <li class="footer__quick-listitem">
+              <a class="footer__quick-listlink" href="#">
+                Blog
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-blog">
+          <h3 class="footer-blog__title">
+            Blog Post
+          </h3>
+          <a class="footer-blog__wrapper" href="#">
+            <img class="footer-blog__img" src="img/content/footer-img-1.jpg" alt="">
+            <div class="footer-blog__box">
+              <h4 class="footer-blog__box-title">
+                Choosing Plants For Water Conservation
+              </h4>
+              <p class="footer-blog__box-date">
+                August 27, 2021
+              </p>
+            </div>
+          </a>
+          <a class="footer-blog__wrapper" href="#">
+            <img class="footer-blog__img" src="img/content/footer-img-2.jpg" alt="">
+            <div class="footer-blog__box">
+              <h4 class="footer-blog__box-title">
+                Maintaining Your Yard This Year
+              </h4>
+              <p class="footer-blog__box-date">
+                August 27, 2021
+              </p>
+            </div>
+          </a>
+          <a class="footer-blog__wrapper" href="#">
+            <img class="footer-blog__img" src="img/content/footer-img-3.jpg" alt="">
+            <div class="footer-blog__box">
+              <h4 class="footer-blog__box-title">
+                Tips For Managing Your Irrigation System
+              </h4>
+              <p class="footer-blog__box-date">
+                August 27, 2021
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="footer-info">
+          <h3 class="footer-info__title">
+            Officeal Info
+          </h3>
+          <a class="footer-info__address" href="#">
+            30 Commercial Road Fratton, Australia
+          </a>
+          <a class="footer-info__phone" href="tel:+18884521829">
+            1-888-452-1829
+          </a>
+          <div class="footer-info__schedule">
+            <div class="footer-info__schedule-title">
+              Open Hours:
+            </div>
+            <div class="footer-info__schedule-hours">
+              <span>Mon – Sat: 8 am – 5 pm,</span>
+              <span>Sunday: CLOSED</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p class="footer-copy__text">
+        Copyright © 2021, Orgamic. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  
+  
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="js/jquery.rateyo.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/mixitup.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
